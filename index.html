@@ -5,183 +5,304 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Khushhal Mandal's portfolio site - a clean starting point for experience, projects, skills, and contact details."
+      content="Khushhal Mandal portfolio - a resume-first website featuring experience, projects, skills, and contact details."
     />
-    <title>Khushhal Mandal | Portfolio</title>
+    <title>Khushhal Mandal | Resume Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="background-orb background-orb-left"></div>
-    <div class="background-orb background-orb-right"></div>
+    <div class="ambient-shape shape-one" aria-hidden="true"></div>
+    <div class="ambient-shape shape-two" aria-hidden="true"></div>
 
-    <header class="site-shell">
+    <header class="container topbar-wrap">
       <nav class="topbar" aria-label="Primary">
-        <a class="brand" href="#home">KM</a>
-        <div class="topbar-links">
+        <a class="brand" href="#home" aria-label="Home">KM</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+        <div class="site-links" id="site-links">
           <a href="#about">About</a>
+          <a href="#highlights">Highlights</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#achievements">Achievements</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
 
-    <main id="home" class="site-shell">
-      <section class="hero card reveal">
-        <div class="hero-copy">
-          <p class="eyebrow">Portfolio starter</p>
-          <h1>Khushhal Mandal</h1>
-          <p class="headline">A modern portfolio foundation for your resume, projects, and future updates.</p>
-          <p class="hero-text">
-            This site is intentionally simple to begin with so you can add more projects, polish your summary,
-            and expand sections over time without rebuilding from scratch.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">View projects</a>
-            <a class="button button-secondary" href="#contact">Contact me</a>
-          </div>
+    <main id="home" class="container">
+      <section class="hero reveal">
+        <p class="eyebrow">Resume Portfolio</p>
+        <h1>Khushhal Mandal</h1>
+        <p class="hero-subhead">
+          Building offline-first and real-time systems across Android, Kotlin Multiplatform, backend APIs, and Tizen platform engineering.
+        </p>
+        <p class="hero-text">
+          SDE Intern at Samsung R&D Institute Delhi focused on distributed device experiences, low-latency communication,
+          and production-ready software across mobile, backend, and system-level components.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore projects</a>
+          <a class="button button-secondary" href="#contact">Get in touch</a>
         </div>
-        <aside class="hero-panel">
-          <div class="status-card">
-            <span class="status-dot"></span>
-            Open to opportunities
-          </div>
-          <dl class="quick-facts">
-            <div>
-              <dt>Focus</dt>
-              <dd>Resume-led portfolio</dd>
-            </div>
-            <div>
-              <dt>Strength</dt>
-              <dd>Fast to expand</dd>
-            </div>
-            <div>
-              <dt>Format</dt>
-              <dd>Responsive single page</dd>
-            </div>
-          </dl>
-        </aside>
       </section>
 
-      <section id="about" class="section card reveal">
-        <div class="section-heading">
+      <section id="about" class="panel reveal">
+        <div class="section-head">
           <p class="eyebrow">About</p>
-          <h2>Start with a clear summary, then refine it later.</h2>
+          <h2>Professional Snapshot</h2>
         </div>
         <p>
-          Replace this paragraph with your actual resume summary when you are ready. For now, this version keeps the
-          structure professional and gives you a strong starting point for introducing your background, goals, and
-          main strengths.
+          I am an Information Technology undergraduate and SDE Intern at Samsung R&D Institute Delhi, focused on
+          systems-level and product engineering. I build real-time communication systems, offline peer-to-peer
+          applications, and production backend services. My work spans Android, Kotlin Multiplatform, Flask APIs,
+          Tizen OS customization, and cloud deployment on AWS.
         </p>
       </section>
 
-      <section id="experience" class="section card reveal">
-        <div class="section-heading">
+      <section id="highlights" class="panel reveal">
+        <div class="section-head">
+          <p class="eyebrow">Highlights</p>
+          <h2>Quick Resume Wins</h2>
+        </div>
+        <div class="stat-grid">
+          <article class="stat-card">
+            <p class="stat-value">700+</p>
+            <p class="stat-label">LeetCode problems solved</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value">1874</p>
+            <p class="stat-label">LeetCode Knight rating</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value">339</p>
+            <p class="stat-label">Global rank in Amazon ML Challenge 2025</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value">Top-15</p>
+            <p class="stat-label">INNOVATE-X Hackathon among 100+ teams</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="panel reveal">
+        <div class="section-head">
           <p class="eyebrow">Experience</p>
-          <h2>Add roles as you grow your resume.</h2>
+          <h2>What I Have Worked On</h2>
         </div>
         <div class="timeline">
           <article class="timeline-item">
-            <span class="timeline-period">Current</span>
-            <h3>Your latest role</h3>
-            <p>Use this space for your current work, internship, freelance role, or main responsibility.</p>
+            <p class="timeline-date">Jan 2026 - Present</p>
+            <h3>SDE Intern | Samsung R&amp;D Institute Delhi (SRI-D)</h3>
+            <ul>
+              <li>Built a geofence-based multi-device system for Tizen TV with real-time location streaming and boundary-based alerts.</li>
+              <li>Implemented proximity-based file transfer using Bluetooth (RFCOMM) and Wi-Fi Aware (NAN), including discovery, peer negotiation, and data exchange.</li>
+              <li>Developed a WebSocket-based real-time chat server enabling persistent low-latency communication between clients.</li>
+              <li>Customized native Tizen OS components (C/C++) and debugged system-level and network issues with Linux tooling.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="panel reveal">
+        <div class="section-head">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected Work</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="project-type">Featured Project</p>
+            <h3>Offline P2P Communication Suite</h3>
+            <p>
+              Built Android applications for offline peer-to-peer chat and file transfer with robust local communication
+              using socket-based data exchange and multi-protocol connectivity.
+            </p>
+            <div class="tag-row">
+              <span>Kotlin</span>
+              <span>Jetpack Compose</span>
+              <span>TCP Sockets</span>
+              <span>Bluetooth RFCOMM</span>
+              <span>Wi-Fi Direct</span>
+              <span>Wi-Fi Aware</span>
+            </div>
+            <a href="https://github.com/khushhal-mandal/offline-p2p-communication-suite" target="_blank" rel="noreferrer">View GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">Featured Project</p>
+            <h3>Noted - Full-Stack Notes Platform</h3>
+            <p>
+              Engineered a cross-platform notes platform and deployed a secure Flask REST backend on AWS EC2 with JWT-authenticated
+              CRUD operations backed by Aurora PostgreSQL.
+            </p>
+            <div class="tag-row">
+              <span>Flask</span>
+              <span>Kotlin Multiplatform</span>
+              <span>AWS EC2</span>
+              <span>Aurora PostgreSQL</span>
+              <span>JWT</span>
+              <span>Nginx</span>
+              <span>Gunicorn</span>
+            </div>
+            <a href="https://noted-acg6.onrender.com/" target="_blank" rel="noreferrer">View Live</a>
+            <a href="https://github.com/khushhal-mandal/noted" target="_blank" rel="noreferrer">View GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">Featured Project</p>
+            <h3>AlgoSketch - Algorithm Visualizer</h3>
+            <p>
+              Developed a Kotlin Multiplatform algorithm visualizer with real-time sorting animations, interactive controls,
+              and dynamic input for learning and experimentation.
+            </p>
+            <div class="tag-row">
+              <span>Kotlin Multiplatform</span>
+              <span>Jetpack Compose</span>
+              <span>Desktop</span>
+              <span>Web</span>
+            </div>
+            <a href="https://khushhal-mandal.github.io/algosketch/" target="_blank" rel="noreferrer">View Live</a>
+            <a href="https://github.com/khushhal-mandal/algosketch" target="_blank" rel="noreferrer">View GitHub</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="panel reveal">
+        <div class="section-head">
+          <p class="eyebrow">Education</p>
+          <h2>Academic Background</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <p class="timeline-date">2022 - 2026</p>
+            <h3>J.C. Bose University of Science and Technology, YMCA</h3>
+            <ul>
+              <li>B.Tech in Information Technology</li>
+              <li>CGPA: 7.79 / 10.00</li>
+            </ul>
           </article>
           <article class="timeline-item">
-            <span class="timeline-period">Previous</span>
-            <h3>Earlier role</h3>
-            <p>Summarize a previous role with impact, tools used, and measurable results.</p>
+            <p class="timeline-date">2021</p>
+            <h3>Vishvas Public School, Shahabad Markanda</h3>
+            <ul>
+              <li>Class XII - CBSE</li>
+              <li>Percentage: 91.16%</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section id="projects" class="section card reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>Showcase your strongest work first.</h2>
+      <section id="achievements" class="panel reveal">
+        <div class="section-head">
+          <p class="eyebrow">Achievements</p>
+          <h2>Competitive Milestones</h2>
         </div>
-        <div class="grid cards-grid">
-          <article class="project-card">
-            <span class="project-tag">Featured</span>
-            <h3>Project title</h3>
-            <p>Add a short description of what the project does, what problem it solves, and what you built it with.</p>
-            <a href="#contact">Add link later</a>
+        <div class="timeline">
+          <article class="timeline-item">
+            <p class="timeline-date">LeetCode</p>
+            <h3>Knight Badge</h3>
+            <ul>
+              <li>Rating: 1874</li>
+              <li>Solved 700+ DSA problems</li>
+            </ul>
           </article>
-          <article class="project-card">
-            <span class="project-tag">Featured</span>
-            <h3>Project title</h3>
-            <p>This is a placeholder for another project so the layout already supports multiple entries.</p>
-            <a href="#contact">Add link later</a>
+          <article class="timeline-item">
+            <p class="timeline-date">Amazon ML Challenge 2025</p>
+            <h3>Global Rank 339</h3>
+            <ul>
+              <li>Secured top global standing in a competitive ML challenge.</li>
+              <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7385183041884708864/" target="_blank" rel="noreferrer">View certificate</a></li>
+            </ul>
           </article>
-          <article class="project-card">
-            <span class="project-tag">Featured</span>
-            <h3>Project title</h3>
-            <p>When you are ready, swap these placeholders for real work from your resume or side projects.</p>
-            <a href="#contact">Add link later</a>
+          <article class="timeline-item">
+            <p class="timeline-date">INNOVATE-X Hackathon (DTU)</p>
+            <h3>Top-15 Finish</h3>
+            <ul>
+              <li>Placed in the Top-15 among 100+ participating teams.</li>
+              <li><a href="https://certificate.givemycertificate.com/c/5e15b3a9-df80-4e12-88d5-290cdf10cf89" target="_blank" rel="noreferrer">View certificate</a></li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section id="skills" class="section card reveal">
-        <div class="section-heading">
+      <section id="skills" class="panel reveal">
+        <div class="section-head">
           <p class="eyebrow">Skills</p>
-          <h2>Keep this section easy to expand.</h2>
+          <h2>Core Toolkit</h2>
         </div>
-        <div class="chip-row" aria-label="Skills list">
-          <span class="chip">Skill</span>
-          <span class="chip">Tool</span>
-          <span class="chip">Framework</span>
-          <span class="chip">Language</span>
-          <span class="chip">Platform</span>
-          <span class="chip">More</span>
+        <div class="skill-columns">
+          <article>
+            <h3>Languages</h3>
+            <p>C/C++ (STL), Kotlin, Python, SQL, XML</p>
+          </article>
+          <article>
+            <h3>Frameworks and Platforms</h3>
+            <p>Android SDK, Jetpack Compose, Kotlin Multiplatform, Flask, Tizen OS</p>
+          </article>
+          <article>
+            <h3>Backend and APIs</h3>
+            <p>REST APIs, WebSockets, TCP Socket Programming, Ktor, Retrofit</p>
+          </article>
+          <article>
+            <h3>Cloud and Databases</h3>
+            <p>AWS (EC2, Aurora PostgreSQL), Nginx, Gunicorn, SQLite, Firebase</p>
+          </article>
+          <article>
+            <h3>Core CS</h3>
+            <p>DSA, OOP, Operating Systems, DBMS, Computer Networks</p>
+          </article>
+          <article>
+            <h3>Tools</h3>
+            <p>Linux, Git, Postman, Android Studio, MobaXterm</p>
+          </article>
         </div>
       </section>
 
-      <section id="education" class="section card reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Education</p>
-          <h2>Add your degree, school, and achievements.</h2>
-        </div>
-        <p>
-          Put your education details here, or keep this section brief if you want the site to stay focused on work and
-          projects.
-        </p>
-      </section>
-
-      <section id="contact" class="section contact-card reveal">
-        <div class="section-heading">
+      <section id="contact" class="panel contact reveal">
+        <div class="section-head">
           <p class="eyebrow">Contact</p>
-          <h2>Make it easy to reach you.</h2>
+          <h2>Let&apos;s Build Something Useful</h2>
         </div>
         <div class="contact-grid">
-          <a class="contact-link" href="mailto:your.email@example.com">
+          <a class="contact-link" href="mailto:khushhalmandal@gmail.com">
             <span>Email</span>
-            your.email@example.com
+            khushhalmandal@gmail.com
           </a>
-          <a class="contact-link" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+          <a class="contact-link" href="tel:+917206062968">
+            <span>Phone</span>
+            +91-7206062968
+          </a>
+          <a class="contact-link" href="https://khushhal-mandal.vercel.app" target="_blank" rel="noreferrer">
+            <span>Portfolio</span>
+            khushhal-mandal.vercel.app
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/khushhal-mandal/" target="_blank" rel="noreferrer">
             <span>LinkedIn</span>
-            Add your profile link
+            linkedin.com/in/khushhal-mandal
           </a>
-          <a class="contact-link" href="https://github.com" target="_blank" rel="noreferrer">
+          <a class="contact-link" href="https://github.com/khushhal-mandal" target="_blank" rel="noreferrer">
             <span>GitHub</span>
-            Add your profile link
+            github.com/khushhal-mandal
           </a>
-          <a class="contact-link" href="#home">
-            <span>Resume</span>
-            Add PDF download later
+          <a class="contact-link" href="https://leetcode.com/u/_kmk_/" target="_blank" rel="noreferrer">
+            <span>LeetCode</span>
+            leetcode.com/u/_kmk_/
           </a>
         </div>
       </section>
     </main>
 
-    <footer class="site-shell footer">
-      <p>Built as an initial portfolio template you can update over time.</p>
+    <footer class="container footer">
+      <p>
+        <span id="year"></span> Khushhal Mandal. Built to present resume highlights with clarity.
+      </p>
     </footer>
 
     <script src="script.js"></script>
