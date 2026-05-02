@@ -1,96 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Khushhal Mandal portfolio - a resume-first website featuring experience, projects, skills, and contact details."
+      content="Khushhal Mandal - SDE at Samsung R&D. Building cross-platform systems, offline connectivity solutions, and production backend services."
     />
-    <title>Khushhal Mandal | Resume Portfolio</title>
+    <title>Khushhal Mandal | Software Development Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Text:ital@0;1&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="ambient-shape shape-one" aria-hidden="true"></div>
-    <div class="ambient-shape shape-two" aria-hidden="true"></div>
-
-    <header class="container topbar-wrap">
-      <nav class="topbar" aria-label="Primary">
-        <a class="brand" href="#home" aria-label="Home">KM</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
-        <div class="site-links" id="site-links">
-          <a href="#about">About</a>
-          <a href="#highlights">Highlights</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </div>
+    <header class="header">
+      <nav class="nav-container">
+        <a href="#" class="logo">Khushhal Mandal</a>
+        <button class="menu-btn" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main id="home" class="container">
-      <section class="hero reveal">
-        <p class="eyebrow">Resume Portfolio</p>
-        <h1>Khushhal Mandal</h1>
-        <p class="hero-subhead">
-          Building offline-first and real-time systems across Android, Kotlin Multiplatform, backend APIs, and Tizen platform engineering.
-        </p>
-        <p class="hero-text">
-          SDE Intern at Samsung R&D Institute Delhi focused on distributed device experiences, low-latency communication,
-          and production-ready software across mobile, backend, and system-level components.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore projects</a>
-          <a class="button button-secondary" href="#contact">Get in touch</a>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Software Development Engineer</h1>
+          <p class="hero-subtitle">Building offline-first systems, cross-platform applications, and production backend services at Samsung R&D.</p>
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="label">Location</span>
+              <span class="value">Faridabad, India</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Focus</span>
+              <span class="value">Systems, Android, Kotlin, Backend</span>
+            </div>
+          </div>
         </div>
       </section>
-
-      <section id="about" class="panel reveal">
-        <div class="section-head">
-          <p class="eyebrow">About</p>
-          <h2>Professional Snapshot</h2>
-        </div>
-        <p>
-          I am an Information Technology undergraduate and SDE Intern at Samsung R&D Institute Delhi, focused on
-          systems-level and product engineering. I build real-time communication systems, offline peer-to-peer
-          applications, and production backend services. My work spans Android, Kotlin Multiplatform, Flask APIs,
-          Tizen OS customization, and cloud deployment on AWS.
+section">
+        <div class="section-wrapper">
+          <h2>About</h2>
+          <p>
+            I'm an SDE Intern at Samsung R&D Institute Delhi, currently in my final year of B.Tech in Information Technology at J.C. Bose University of Science and Technology, YMCA. My work centers on cross-platform application architecture, system-level multi-device connectivity, and production backend services. I design and implement offline-first systems, real-time communication platforms, and distributed device experiences.
+          </p>
+          <p>
+            Core expertise spans Android/Kotlin Multiplatform development, Flask and WebSocket-based APIs, Tizen OS platform engineering, and cloud infrastructure on AWS. I'm driven by clean architecture, efficient algorithms, and shipping production-quality code.
+          </p>
+        </divizen OS customization, and cloud deployment on AWS.
         </p>
       </section>
 
       <section id="highlights" class="panel reveal">
-        <div class="section-head">
-          <p class="eyebrow">Highlights</p>
-          <h2>Quick Resume Wins</h2>
-        </div>
-        <div class="stat-grid">
-          <article class="stat-card">
-            <p class="stat-value">700+</p>
-            <p class="stat-label">LeetCode problems solved</p>
-          </article>
-          <article class="stat-card">
-            <p class="stat-value">1874</p>
-            <p class="stat-label">LeetCode Knight rating</p>
-          </article>
-          <article class="stat-card">
-            <p class="stat-value">339</p>
-            <p class="stat-label">Global rank in Amazon ML Challenge 2025</p>
-          </article>
-          <article class="stat-card">
-            <p class="stat-value">Top-15</p>
-            <p class="stat-label">INNOVATE-X Hackathon among 100+ teams</p>
-          </article>
-        </div>
-      </section>
 
       <section id="experience" class="panel reveal">
         <div class="section-head">
@@ -116,77 +91,88 @@
           <p class="eyebrow">Projects</p>
           <h2>Selected Work</h2>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <p class="project-type">Featured Project</p>
-            <h3>Offline P2P Communication Suite</h3>
-            <p>
-              Built Android applications for offline peer-to-peer chat and file transfer with robust local communication
-              using socket-based data exchange and multi-protocol connectivity.
-            </p>
-            <div class="tag-row">
-              <span>Kotlin</span>
-              <span>Jetpack Compose</span>
-              <span>TCP Sockets</span>
-              <span>Bluetooth RFCOMM</span>
-              <span>Wi-Fi Direct</span>
-              <span>Wi-Fi Aware</span>
+        <div class="project-grid">section">
+        <div class="section-wrapper">
+          <h2>Experience</h2>
+          <div class="experience-item">
+            <div class="exp-header">
+              <h3>SDE Intern</h3>
+              <span class="exp-date">Jan 2026 – Present</span>
             </div>
-            <a href="https://github.com/khushhal-mandal/offline-p2p-communication-suite" target="_blank" rel="noreferrer">View GitHub</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Featured Project</p>
-            <h3>Noted - Full-Stack Notes Platform</h3>
-            <p>
-              Engineered a cross-platform notes platform and deployed a secure Flask REST backend on AWS EC2 with JWT-authenticated
-              CRUD operations backed by Aurora PostgreSQL.
-            </p>
-            <div class="tag-row">
-              <span>Flask</span>
-              <span>Kotlin Multiplatform</span>
-              <span>AWS EC2</span>
-              <span>Aurora PostgreSQL</span>
-              <span>JWT</span>
-              <span>Nginx</span>
-              <span>Gunicorn</span>
-            </div>
-            <a href="https://noted-acg6.onrender.com/" target="_blank" rel="noreferrer">View Live</a>
-            <a href="https://github.com/khushhal-mandal/noted" target="_blank" rel="noreferrer">View GitHub</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Featured Project</p>
-            <h3>AlgoSketch - Algorithm Visualizer</h3>
-            <p>
-              Developed a Kotlin Multiplatform algorithm visualizer with real-time sorting animations, interactive controls,
-              and dynamic input for learning and experimentation.
-            </p>
-            <div class="tag-row">
-              <span>Kotlin Multiplatform</span>
-              <span>Jetpack Compose</span>
-              <span>Desktop</span>
-              <span>Web</span>
-            </div>
-            <a href="https://khushhal-mandal.github.io/algosketch/" target="_blank" rel="noreferrer">View Live</a>
-            <a href="https://github.com/khushhal-mandal/algosketch" target="_blank" rel="noreferrer">View GitHub</a>
-          </article>
-        </div>
-      </section>
-
-      <section id="education" class="panel reveal">
-        <div class="section-head">
-          <p class="eyebrow">Education</p>
-          <h2>Academic Background</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <p class="timeline-date">2022 - 2026</p>
-            <h3>J.C. Bose University of Science and Technology, YMCA</h3>
-            <ul>
-              <li>B.Tech in Information Technology</li>
-              <li>CGPA: 7.79 / 10.00</li>
+            <p class="exp-company">Samsung R&D Institute Delhi (SRI-D)</p>
+            <ul class="exp-list">
+              <li>Architected and demoed a production-track Model Context Protocol (MCP) HTTP server hosted on mobile devices for local network communication and complex data exchange.</li>
+              <li>Engineered a Proof-of-Concept geofence system for Tizen TVs using WebSocket-based client-server architecture for real-time location tracking and boundary-alert triggers.</li>
+              <li>Simulated offline Wi-Fi location tracking to demonstrate multi-device actions without internet reliance.</li>
+              <li>Developed testbeds for proximity-based connectivity using Bluetooth (RFCOMM) and Wi-Fi Aware (NAN) with offline file transfer capabilities.</li>
+              <li>Analyzed production Tizen OS codebases (C/C++), navigated native TV application lifecycle, and debugged system-level network issues using Linux tooling.</li>
             </ul>
+          </div>
+          <div class="experience-item">
+            <div class="exp-header">
+              <h3>Android Developmensection">
+        <div class="section-wrapper">
+          <h2>Featured Projects</h2>
+          <div class="projects-list">
+            <article class="project">
+              <div class="project-header">
+                <h3>Offline P2P Communication Suite</h3>
+                <a href="https://github.com/khushhal-mandal/offline-p2p-communication-suite" target="_blank" rel="noreferrer" class="project-link">GitHub →</a>
+              </div>
+              <p>Android applications for offline peer-to-peer chat and file transfer. Features custom device discovery, robust socket-based TCP data exchange, and multi-protocol connectivity.</p>
+              <div class="tech-tags">
+                <span>Kotlin</span>
+                <span>Jetpack Compose</span>
+                <span>TCP Sockets</span>
+                <span>Bluetooth RFCOMM</span>
+                <span>Wi-Fi Direct</span>
+                <span>Wi-Fi Aware</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-header">
+                <h3>Noted — Full-Stack Notes Platform</h3>
+                <span class="links-group">
+                  <a href="https://noted-acg6.onrender.com/" target="_blank" rel="noreferrer" class="project-link">Live →</a>
+                  <a href="https://github.com/khushhal-mandal/noted" target="_blank" rel="noreferrer" class="project-link">GitHub →</a>
+                </span>
+              </div>
+              <p>Cross-platform notes application with secure Flask REST API backend. Deployed on AWS EC2 with Aurora PostgreSQL, JWT authentication, and 95% code reuse across platforms.</p>
+              <div class="tech-tags">
+                <span>Flask</span>
+                <span>Kotlin Multiplatform</span>
+                <span>AWS EC2</span>
+                <span>Aurora PostgreSQL</span>
+                <span>JWT</span>
+                <span>Nginx</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-header">
+                <h3>Sky Theatre — Cross-Platform Weather App</h3>
+                <a href="https://github.com/khushhal-mandal/skytheatre" target="_blank" rel="noreferrer" class="project-link">GitHub →</a>
+              </div>
+              <p>Weather application for Android, iOS, and Desktop with ~95% code reuse. Features real-time API integration, offline favorites via Room database, Clean Architecture, and MVVM pattern.</p>
+              <div class="tech-tags">
+                <span>Kotlin Multiplatform</span>
+                <span>Jetpack Compose</span>
+                <span>MVVM</span>
+                <span>Koin</span>
+                <span>Room</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-header">
+                <h3>AlgoSketch — Algorithm Visualizer</h3>
+                <a href="https://khushhal-mandal.github.io/algosketch/" target="_blank" rel="noreferrer" class="project-link">Live →</a>
+              </div>
+              <p>Interactive cross-platform visualizer for sorting algorithms with real-time color-coded animations, dynamic array sizing, and execution speed controls for learning.</p>
+              <div class="tech-tags">
+                <span>Kotlin Multiplatform</span>
+>
           </article>
           <article class="timeline-item">
             <p class="timeline-date">2021</p>
@@ -211,38 +197,7 @@
             <ul>
               <li>Rating: 1874</li>
               <li>Solved 700+ DSA problems</li>
-            </ul>
-          </article>
-          <article class="timeline-item">
-            <p class="timeline-date">Amazon ML Challenge 2025</p>
-            <h3>Global Rank 339</h3>
-            <ul>
-              <li>Secured top global standing in a competitive ML challenge.</li>
-              <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7385183041884708864/" target="_blank" rel="noreferrer">View certificate</a></li>
-            </ul>
-          </article>
-          <article class="timeline-item">
-            <p class="timeline-date">INNOVATE-X Hackathon (DTU)</p>
-            <h3>Top-15 Finish</h3>
-            <ul>
-              <li>Placed in the Top-15 among 100+ participating teams.</li>
-              <li><a href="https://certificate.givemycertificate.com/c/5e15b3a9-df80-4e12-88d5-290cdf10cf89" target="_blank" rel="noreferrer">View certificate</a></li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="panel reveal">
-        <div class="section-head">
-          <p class="eyebrow">Skills</p>
-          <h2>Core Toolkit</h2>
-        </div>
-        <div class="skill-columns">
-          <article>
-            <h3>Languages</h3>
-            <p>C/C++ (STL), Kotlin, Python, SQL, XML</p>
-          </article>
-          <article>
+le>
             <h3>Frameworks and Platforms</h3>
             <p>Android SDK, Jetpack Compose, Kotlin Multiplatform, Flask, Tizen OS</p>
           </article>
@@ -275,36 +230,43 @@
             <span>Email</span>
             khushhalmandal@gmail.com
           </a>
-          <a class="contact-link" href="tel:+917206062968">
-            <span>Phone</span>
-            +91-7206062968
-          </a>
-          <a class="contact-link" href="https://khushhal-mandal.vercel.app" target="_blank" rel="noreferrer">
-            <span>Portfolio</span>
-            khushhal-mandal.vercel.app
-          </a>
-          <a class="contact-link" href="https://www.linkedin.com/in/khushhal-mandal/" target="_blank" rel="noreferrer">
-            <span>LinkedIn</span>
-            linkedin.com/in/khushhal-mandal
-          </a>
-          <a class="contact-link" href="https://github.com/khushhal-mandal" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
-            github.com/khushhal-mandal
-          </a>
-          <a class="contact-link" href="https://leetcode.com/u/_kmk_/" target="_blank" rel="noreferrer">
-            <span>LeetCode</span>
-            leetcode.com/u/_kmk_/
-          </a>
+          <a class="contact-link" section">
+        <div class="section-wrapper">
+          <h2>Skills &amp; Achievements</h2>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-wrapper">
+          <h2>Get in Touch</h2>
+          <div class="contact-content">
+            <p>Open to discussions about systems engineering, distributed systems, cross-platform development, and product work.</p>
+            <div class="contact-links">
+              <a href="mailto:khushhalmandal@gmail.com" class="contact-item">
+                <span class="label">Email</span>
+                <span class="value">khushhalmandal@gmail.com</span>
+              </a>
+              <a href="tel:+917206062968" class="contact-item">
+                <span class="label">Phone</span>
+                <span class="value">+91-7206062968</span>
+              </a>
+              <a href="https://www.linkedin.com/in/khushhal-mandal/" target="_blank" rel="noreferrer" class="contact-item">
+                <span class="label">LinkedIn</span>
+                <span class="value">linkedin.com/in/khushhal-mandal</span>
+              </a>
+              <a href="https://github.com/khushhal-mandal" target="_blank" rel="noreferrer" class="contact-item">
+                <span class="label">GitHub</span>
+                <span class="value">github.com/khushhal-mandal</span>
+              </a>
+              <a href="https://leetcode.com/u/_kmk_/" target="_blank" rel="noreferrer" class="contact-item">
+                <span class="label">LeetCode</span>
+                <span class="value">leetcode.com/u/_kmk_</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="container footer">
-      <p>
-        <span id="year"></span> Khushhal Mandal. Built to present resume highlights with clarity.
-      </p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Khushhal Mandal. Engineering + Coffee.
