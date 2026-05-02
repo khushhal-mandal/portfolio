@@ -86,6 +86,23 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         /* Hero Section */
@@ -122,6 +139,13 @@
             font-size: 1.5rem;
             margin-right: 1.5rem;
             color: var(--text-main);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
         }
 
         /* Experience */
@@ -196,6 +220,39 @@
             border-radius: 50px;
             font-family: var(--font-body);
             font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .pill:hover {
+            background: var(--accent-color);
+            color: var(--card-bg);
+            border-color: var(--accent-color);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .project-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            background: rgba(30, 63, 45, 0.05);
+        }
+
+        .project-links a:hover {
+            background: rgba(30, 63, 45, 0.1);
+            transform: translateX(4px);
         }
 
         /* Skills */
@@ -232,6 +289,17 @@
             font-weight: 500;
         }
 
+        .achievements-list a {
+            color: var(--accent-color);
+            font-weight: 500;
+            border-bottom: 1px solid rgba(30, 63, 45, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .achievements-list a:hover {
+            border-bottom-color: var(--accent-color);
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -261,6 +329,7 @@
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
+                <a href="#achievements">Achievements</a>
             </nav>
         </header>
 
@@ -275,9 +344,10 @@
             </div>
 
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/khushhal-mandal/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/khushhal-mandal" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://leetcode.com/u/kmk/" target="_blank"><i class="fa-solid fa-code"></i></a>
+                <a href="https://www.linkedin.com/in/khushhal-mandal/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/khushhal-mandal" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/_kmk_/" target="_blank" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+                <a href="https://www.chess.com/member/khushhal-mandal" target="_blank" title="Chess.com"><i class="fa-solid fa-chess"></i></a>
             </div>
         </section>
 
@@ -328,6 +398,9 @@
                         <span class="pill">Wi-Fi Direct & Aware</span>
                     </div>
                     <p>Android applications built for offline peer-to-peer chat and file transfer. Features custom device discovery, connection negotiation, and socket-based TCP data exchange for real-time local communication.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/khushhal-mandal/offline-p2p-communication-suite" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -339,6 +412,9 @@
                         <span class="pill">Koin DI</span>
                     </div>
                     <p>A cross-platform weather application for Android, iOS, and Desktop achieving ~95% code reuse. Features include real-time API integration, offline favorites via Room database, and a Clean Architecture implementation.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/khushhal-mandal/skytheatre" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -351,6 +427,10 @@
                         <span class="pill">JWT</span>
                     </div>
                     <p>A cross-platform notes application integrated via Ktor to a secure Flask REST API. Deployed on an AWS EC2 instance backed by Aurora PostgreSQL with JWT-authenticated CRUD operations.</p>
+                    <div class="project-links">
+                        <a href="https://noted-acg6.onrender.com/" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Live</a>
+                        <a href="https://github.com/khushhal-mandal/noted" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -362,6 +442,9 @@
                         <span class="pill">Hilt</span>
                     </div>
                     <p>Full-featured e-commerce platform supporting cart management, wishlist, and secure Razorpay checkouts. Includes an Admin Dashboard utilizing Vico Compose for sales data visualization.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/khushhal-mandal/myshop" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -371,6 +454,9 @@
                         <span class="pill">Jetpack Compose</span>
                     </div>
                     <p>An interactive, cross-platform visualizer for sorting algorithms. Includes real-time color-coded animations, dynamic array sizing, and execution speed controls.</p>
+                    <div class="project-links">
+                        <a href="https://khushhal-mandal.github.io/algosketch/" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Live</a>
+                    </div>
                 </div>
 
             </div>
@@ -414,13 +500,14 @@
             <h2>Achievements & Leadership</h2>
             <ul class="achievements-list">
                 <li><strong>Competitive Programming:</strong> LeetCode Knight (Rating 1874) with 700+ problems solved. Global rank 4724/35,629 in LeetCode Weekly Contest 464.</li>
+                <li><strong>Chess:</strong> <a href="https://www.chess.com/member/khushhal-mandal" target="_blank">Chess.com Rapid — 2055 Highest Rating</a>. International chess player with competitive online presence.</li>
                 <li><strong>Hackathons & Challenges:</strong> Global Rank 339 in Amazon ML Challenge 2025. Top-15 finish in INNOVATE-X Hackathon at DTU.</li>
                 <li><strong>Leadership:</strong> Captain of the University Football Team (YMCA CF) and Secretary of Eklavya The Sports Club.</li>
             </ul>
         </section>
 
         <footer>
-            <p>&copy; 2026 Khushhal Mandal. Designed and built with a focus on clean architecture.</p>
+            <p>&copy; 2026 Khushhal Mandal. Building systems that scale.</p>
         </footer>
     </div>
 
