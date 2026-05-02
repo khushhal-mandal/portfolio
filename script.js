@@ -1,24 +1,23 @@
 // Mobile menu toggle
-const menuBtn = document.querySelector('.menu-btn');
-const navMenu = document.querySelector('.nav-menu');
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
 
-if (menuBtn && navMenu) {
-  menuBtn.addEventListener('click', () => {
-    const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
-    menuBtn.setAttribute('aria-expanded', String(!isOpen));
-    navMenu.classList.toggle('is-open');
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navList.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', isOpen);
   });
 
   // Close menu when a link is clicked
-  navMenu.querySelectorAll('a').forEach((link) => {
+  navList.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      menuBtn.setAttribute('aria-expanded', 'false');
-      navMenu.classList.remove('is-open');
+      navList.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
 
-// Set current year in footer
+// Set year in footer
 const yearElement = document.getElementById('year');
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
