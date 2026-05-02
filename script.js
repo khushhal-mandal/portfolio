@@ -1,24 +1,34 @@
-// Mobile menu toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
+document.addEventListener('DOMContentLoaded', () => {
+    // Project Slider Logic
+    const track = document.getElementById('projectsTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navList.classList.toggle('is-open');
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
+    if (track && prevBtn && nextBtn) {
+        // Calculate the distance to scroll based on the width of a card plus the gap
+        const getScrollAmount = () => {
+            const card = track.querySelector('.project-card');
+            if (card) {
+                // Get the card width and the gap from the CSS layout
+                const cardWidth = card.offsetWidth;
+                const gap = parseInt(window.getComputedStyle(track).gap) || 0;
+                return cardWidth + gap;
+            }
+            return 300; // Fallback
+        };
 
-  // Close menu when a link is clicked
-  navList.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navList.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
+        nextBtn.addEventListener('click', () => {
+            track.scrollBy({
+                left: getScrollAmount(),
+                behavior: 'smooth'
+            });
+        });
 
-// Set year in footer
-const yearElement = document.getElementById('year');
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+        prevBtn.addEventListener('click', () => {
+            track.scrollBy({
+                left: -getScrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+    }
+});

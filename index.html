@@ -5,337 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khushhal Mandal | Software Development Engineer</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            --bg-color: #FAFAF8;
-            --text-main: #1C1C1C;
-            --text-muted: #5A5A5A;
-            --accent-color: #1E3F2D; /* Forest Green */
-            --border-color: #E6E4E0;
-            --card-bg: #FFFFFF;
-            
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-body);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            color: var(--text-main);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--accent-color);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-family: var(--font-heading);
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-        h2 { font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
-        h3 { font-size: 1.25rem; margin-bottom: 0.25rem; }
-        
-        p { color: var(--text-muted); font-size: 1rem; margin-bottom: 1rem; }
-        
-        section {
-            padding: 4rem 0;
-        }
-
-        /* Header / Nav */
-        header {
-            padding: 2rem 0;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        nav a {
-            margin-left: 2rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding-top: 4rem;
-            padding-bottom: 6rem;
-        }
-
-        .hero h2.subtitle {
-            border: none;
-            font-family: var(--font-body);
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-info a {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-muted);
-        }
-
-        .social-links a {
-            font-size: 1.5rem;
-            margin-right: 1.5rem;
-            color: var(--text-main);
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-            transform: translateY(-3px);
-        }
-
-        /* Experience */
-        .experience-item {
-            margin-bottom: 2.5rem;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1rem;
-        }
-
-        .experience-header span {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        ul.research-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        ul.research-list li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        ul.research-list li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border-color: var(--accent-color);
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .pill {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.75rem;
-            background: var(--bg-color);
-            border: 1px solid var(--border-color);
-            color: var(--accent-color);
-            border-radius: 50px;
-            font-family: var(--font-body);
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .pill:hover {
-            background: var(--accent-color);
-            color: var(--card-bg);
-            border-color: var(--accent-color);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .project-links a {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--accent-color);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.2s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            background: rgba(30, 63, 45, 0.05);
-        }
-
-        .project-links a:hover {
-            background: rgba(30, 63, 45, 0.1);
-            transform: translateX(4px);
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category h4 {
-            margin-bottom: 0.75rem;
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-main);
-        }
-
-        .skill-category p {
-            font-size: 0.95rem;
-        }
-
-        /* Extracurriculars */
-        .achievements-list li {
-            margin-bottom: 1rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-            list-style-type: square;
-            margin-left: 1.2rem;
-        }
-
-        .achievements-list strong {
-            color: var(--text-main);
-            font-weight: 500;
-        }
-
-        .achievements-list a {
-            color: var(--accent-color);
-            font-weight: 500;
-            border-bottom: 1px solid rgba(30, 63, 45, 0.3);
-            transition: all 0.2s ease;
-        }
-
-        .achievements-list a:hover {
-            border-bottom-color: var(--accent-color);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem 0;
-            border-top: 1px solid var(--border-color);
-            margin-top: 4rem;
-        }
-
-        footer p {
-            font-size: 0.85rem;
-            margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .experience-header { flex-direction: column; }
-            .experience-header span { margin-top: 0.25rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">KM.</a>
+            <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
-                <a href="#achievements">Achievements</a>
-            </nav>
-        </header>
+            </div>
+        </div>
+    </nav>
 
-        <section class="hero">
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="container hero-centered">
             <h1>Khushhal Mandal</h1>
-            <h2 class="subtitle">Software Development Engineer | Cross-Platform & System-Level Architect</h2>
+            <h2 class="subtitle">Software Development Engineer <br> Cross-Platform & System-Level Architect</h2>
             
             <div class="contact-info">
                 <a href="mailto:khushhalmandal@gmail.com"><i class="fa-regular fa-envelope"></i> khushhalmandal@gmail.com</a>
@@ -344,172 +39,255 @@
             </div>
 
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/khushhal-mandal/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/khushhal-mandal" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://leetcode.com/u/_kmk_/" target="_blank" title="LeetCode"><i class="fa-solid fa-code"></i></a>
-                <a href="https://www.chess.com/member/khushhal-mandal" target="_blank" title="Chess.com"><i class="fa-solid fa-chess"></i></a>
+                <a href="https://www.linkedin.com/in/khushhal-mandal/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/khushhal-mandal" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/_kmk_/" target="_blank"><i class="fa-solid fa-code"></i></a>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>I am a Software Development Engineer currently in my final year of a B.Tech in Information Technology at J.C. Bose University of Science and Technology, YMCA. My work centers on cross-platform application architecture, system-level multi-device connectivity, and full-stack development. I am currently researching and building production-track connectivity solutions for Tizen OS at Samsung R&D Institute Delhi.</p>
-        </section>
+    <!-- About Section -->
+    <section id="about" class="section-darker">
+        <div class="container">
+            <div class="section-header center-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-card text-center">
+                <p>I am a Software Development Engineer currently in my final year of a B.Tech in Information Technology at J.C. Bose University of Science and Technology, YMCA. My work centers on cross-platform application architecture, system-level multi-device connectivity, and full-stack development. I am currently researching and building production-track connectivity solutions for Tizen OS at Samsung R&D Institute Delhi.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+            </div>
             
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Software Development Engineer Intern — Samsung R&D Institute Delhi (SRI-D)</h3>
-                    <span>Jan 2026 – Present</span>
+            <div class="experience-card">
+                <div class="exp-meta">
+                    <h3>Software Development Engineer Intern</h3>
+                    <h4>Samsung R&D Institute Delhi (SRI-D)</h4>
+                    <span class="date-badge">Jan 2026 – Present</span>
                 </div>
-                <ul class="research-list">
-                    <li>Architected and demoed a production-track Model Context Protocol (MCP) HTTP server hosted on mobile devices, enabling external devices on a local access point to communicate, query, and exchange complex data payloads (JSON and images).</li>
-                    <li>Engineered a Proof-of-Concept (PoC) geofence system for Tizen TVs utilizing a WebSocket-based client-server architecture for real-time data exchange.</li>
-                    <li>Simulated location tracking over a local, offline Wi-Fi network to successfully demonstrate boundary-based alerts and trigger multi-device actions without internet reliance.</li>
-                    <li>Developed functional testbeds to evaluate proximity-based multi-device connectivity, implementing offline file transfer using Bluetooth (RFCOMM) and Wi-Fi Aware (NAN).</li>
-                    <li>Analyzed production Tizen OS (C/C++) codebases, utilizing Tizen CLI and Linux tools to navigate the native TV application lifecycle and debug system-level network issues.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Mentee — Android Development Mentorship Program</h3>
-                    <span>Ended Dec 2024</span>
-                </div>
-                <ul class="research-list">
-                    <li>Developed Android applications utilizing Firebase and Supabase for database operations, user authentication, and real-time syncing.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <h3>Offline P2P Communication Suite</h3>
-                    <div class="tech-stack">
-                        <span class="pill">Kotlin</span>
-                        <span class="pill">Jetpack Compose</span>
-                        <span class="pill">TCP Sockets</span>
-                        <span class="pill">Bluetooth</span>
-                        <span class="pill">Wi-Fi Direct & Aware</span>
-                    </div>
-                    <p>Android applications built for offline peer-to-peer chat and file transfer. Features custom device discovery, connection negotiation, and socket-based TCP data exchange for real-time local communication.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/khushhal-mandal/offline-p2p-communication-suite" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Sky Theatre</h3>
-                    <div class="tech-stack">
-                        <span class="pill">Kotlin Multiplatform</span>
-                        <span class="pill">Jetpack Compose</span>
-                        <span class="pill">MVVM</span>
-                        <span class="pill">Koin DI</span>
-                    </div>
-                    <p>A cross-platform weather application for Android, iOS, and Desktop achieving ~95% code reuse. Features include real-time API integration, offline favorites via Room database, and a Clean Architecture implementation.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/khushhal-mandal/skytheatre" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Noted</h3>
-                    <div class="tech-stack">
-                        <span class="pill">Flask</span>
-                        <span class="pill">KMP</span>
-                        <span class="pill">AWS EC2</span>
-                        <span class="pill">PostgreSQL</span>
-                        <span class="pill">JWT</span>
-                    </div>
-                    <p>A cross-platform notes application integrated via Ktor to a secure Flask REST API. Deployed on an AWS EC2 instance backed by Aurora PostgreSQL with JWT-authenticated CRUD operations.</p>
-                    <div class="project-links">
-                        <a href="https://noted-acg6.onrender.com/" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Live</a>
-                        <a href="https://github.com/khushhal-mandal/noted" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>MyShop</h3>
-                    <div class="tech-stack">
-                        <span class="pill">Jetpack Compose</span>
-                        <span class="pill">Firebase</span>
-                        <span class="pill">Razorpay</span>
-                        <span class="pill">Hilt</span>
-                    </div>
-                    <p>Full-featured e-commerce platform supporting cart management, wishlist, and secure Razorpay checkouts. Includes an Admin Dashboard utilizing Vico Compose for sales data visualization.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/khushhal-mandal/myshop" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>AlgoSketch</h3>
-                    <div class="tech-stack">
-                        <span class="pill">Kotlin Multiplatform</span>
-                        <span class="pill">Jetpack Compose</span>
-                    </div>
-                    <p>An interactive, cross-platform visualizer for sorting algorithms. Includes real-time color-coded animations, dynamic array sizing, and execution speed controls.</p>
-                    <div class="project-links">
-                        <a href="https://khushhal-mandal.github.io/algosketch/" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Live</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Languages</h4>
-                    <p>C/C++ (STL), Kotlin, Python, SQL, XML</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Android / KMP</h4>
-                    <p>Android SDK, Jetpack Compose, Compose Multiplatform, Room, Hilt, Koin, Voyager, Coroutines & Flow</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Backend & APIs</h4>
-                    <p>Flask (REST, JWT), WebSockets, Socket Programming (TCP), Ktor & Retrofit (client)</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Cloud & Databases</h4>
-                    <p>AWS (EC2, Aurora RDS - PostgreSQL), Nginx, Gunicorn, Firebase (Firestore, Auth, Storage), SQLite</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Data, ML & AI</h4>
-                    <p>NumPy, Pandas, scikit-learn, Matplotlib, TensorFlow, Deep Learning, NLP</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Architecture & Core CS</h4>
-                    <p>MVVM, Clean Architecture, JWT Authentication, Data Structures & Algorithms, OOP, OS, DBMS, Computer Networks</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Tools</h4>
-                    <p>Linux, Git, GitHub, Postman, Android Studio, VS Code, MobaXterm, Razorpay SDK</p>
+                <div class="exp-details">
+                    <ul>
+                        <li>Architected and demoed a production-track Model Context Protocol (MCP) HTTP server hosted on mobile devices, enabling external devices on a local access point to communicate, query, and exchange complex data payloads (JSON and images).</li>
+                        <li>Engineered a Proof-of-Concept (PoC) geofence system for Tizen TVs utilizing a WebSocket-based client-server architecture for real-time data exchange.</li>
+                        <li>Simulated location tracking over a local, offline Wi-Fi network to successfully demonstrate boundary-based alerts and trigger multi-device actions without internet reliance.</li>
+                        <li>Developed functional testbeds to evaluate proximity-based multi-device connectivity, implementing offline file transfer using Bluetooth (RFCOMM) and Wi-Fi Aware (NAN).</li>
+                        <li>Analyzed production Tizen OS (C/C++) codebases, utilizing Tizen CLI and Linux tools to navigate the native TV application lifecycle and debug system-level network issues.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="achievements">
-            <h2>Achievements & Leadership</h2>
-            <ul class="achievements-list">
-                <li><strong>Competitive Programming:</strong> LeetCode Knight (Rating 1874) with 700+ problems solved. Global rank 4724/35,629 in LeetCode Weekly Contest 464.</li>
-                <li><strong>Chess:</strong> <a href="https://www.chess.com/member/khushhal-mandal" target="_blank">Chess.com Rapid — 2055 Highest Rating</a>. International chess player with competitive online presence.</li>
-                <li><strong>Hackathons & Challenges:</strong> Global Rank 339 in Amazon ML Challenge 2025. Top-15 finish in INNOVATE-X Hackathon at DTU.</li>
-                <li><strong>Leadership:</strong> Captain of the University Football Team (YMCA CF) and Secretary of Eklavya The Sports Club.</li>
-            </ul>
-        </section>
+    <!-- Projects Section (Horizontal Slider) -->
+    <section id="projects" class="section-darker">
+        <div class="container">
+            <div class="slider-header">
+                <div class="section-header no-margin">
+                    <h2>Featured Architecture & Projects</h2>
+                </div>
+                <div class="slider-controls">
+                    <button id="prevBtn" aria-label="Previous Project"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="nextBtn" aria-label="Next Project"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="slider-wrapper">
+                <div class="projects-track" id="projectsTrack">
+                    
+                    <!-- Offline P2P -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Offline P2P Communication Suite</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/khushhal-mandal/offline-p2p-communication-suite" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p>Android applications built for offline peer-to-peer chat and file transfer. Features custom device discovery, connection negotiation, and socket-based TCP data exchange for real-time local communication.</p>
+                        <div class="tech-stack">
+                            <span>Kotlin</span> <span>Compose</span> <span>TCP Sockets</span> <span>Bluetooth</span> <span>Wi-Fi Direct</span>
+                        </div>
+                    </div>
 
-        <footer>
-            <p>&copy; 2026 Khushhal Mandal. Building systems that scale.</p>
-        </footer>
-    </div>
+                    <!-- Sky Theatre -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Sky Theatre</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/khushhal-mandal/skytheatre" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p>A cross-platform weather application for Android, iOS, and Desktop achieving ~95% code reuse. Features include real-time API integration, offline favorites via Room database, and a Clean Architecture implementation.</p>
+                        <div class="tech-stack">
+                            <span>KMP</span> <span>Compose</span> <span>MVVM</span> <span>Koin DI</span>
+                        </div>
+                    </div>
 
+                    <!-- Noted -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Noted</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/khushhal-mandal/noted" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://noted-acg6.onrender.com/" target="_blank" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <p>A cross-platform notes application integrated via Ktor to a secure Flask REST API. Deployed on an AWS EC2 instance backed by Aurora PostgreSQL with JWT-authenticated CRUD operations.</p>
+                        <div class="tech-stack">
+                            <span>Flask</span> <span>KMP</span> <span>AWS EC2</span> <span>PostgreSQL</span> <span>JWT</span>
+                        </div>
+                    </div>
+
+                    <!-- MyShop -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>MyShop</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/khushhal-mandal/myshop" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p>Full-featured e-commerce platform supporting cart management, wishlist, and secure Razorpay checkouts. Includes an Admin Dashboard utilizing Vico Compose for sales data visualization.</p>
+                        <div class="tech-stack">
+                            <span>Compose</span> <span>Firebase</span> <span>Razorpay</span> <span>Hilt</span>
+                        </div>
+                    </div>
+
+                    <!-- AlgoSketch -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>AlgoSketch</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/khushhal-mandal/algosketch" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://khushhal-mandal.github.io/algosketch/" target="_blank" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <p>An interactive, cross-platform visualizer for sorting algorithms. Includes real-time color-coded animations, dynamic array sizing, and execution speed controls.</p>
+                        <div class="tech-stack">
+                            <span>Kotlin Multiplatform</span> <span>Desktop/Web</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Toolkit</h2>
+            </div>
+            
+            <div class="skills-structured-grid">
+                <!-- Box 1 -->
+                <div class="skill-block">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-code"></i>
+                        <h4>Languages</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span>C/C++ (STL)</span><span>Kotlin</span><span>Python</span><span>SQL</span><span>XML</span>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="skill-block">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-android"></i>
+                        <h4>Android & Multiplatform</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Android SDK</span><span>Jetpack Compose</span><span>Compose Multiplatform</span><span>Room</span><span>Hilt</span><span>Koin</span><span>Voyager</span><span>Coroutines & Flow</span>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="skill-block wide-skill-block">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-server"></i>
+                        <h4>Backend, Cloud & Databases</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Flask (REST, JWT)</span><span>WebSockets</span><span>TCP Sockets</span><span>Ktor & Retrofit</span><span>AWS (EC2, Aurora RDS)</span><span>PostgreSQL</span><span>Nginx</span><span>Gunicorn</span><span>Firebase</span><span>SQLite</span>
+                    </div>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="skill-block">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h4>Data, ML & AI</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span>NumPy</span><span>Pandas</span><span>scikit-learn</span><span>Matplotlib</span><span>TensorFlow</span><span>Deep Learning</span><span>NLP</span>
+                    </div>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="skill-block">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h4>Architecture & Tools</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span>MVVM</span><span>Clean Architecture</span><span>JWT</span><span>Linux</span><span>Git</span><span>Postman</span><span>Android Studio</span><span>MobaXterm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-darker">
+        <div class="container">
+            <div class="section-header">
+                <h2>Achievements & Interests</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <i class="fa-solid fa-code"></i>
+                    <div>
+                        <h4>Competitive Programming</h4>
+                        <p>LeetCode Knight (Rating 1874) with 700+ problems solved. Global rank 1001/35,629 in LeetCode Weekly Contest 422.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <i class="fa-solid fa-chess-knight"></i>
+                    <div>
+                        <h4>Chess Strategy</h4>
+                        <p>Active player with a peak Rapid Rating of <strong>2055</strong>. <a href="https://www.chess.com/member/mandal10" target="_blank" class="text-link">View Chess.com Profile →</a></p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <i class="fa-solid fa-trophy"></i>
+                    <div>
+                        <h4>Hackathons & Challenges</h4>
+                        <p>Global Rank 339 in Amazon ML Challenge 2025. Top-15 finish in INNOVATE-X Hackathon at DTU.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <i class="fa-solid fa-futbol"></i>
+                    <div>
+                        <h4>Leadership & Athletics</h4>
+                        <p>Captain of the University Football Team (YMCA CF) and Secretary of Eklavya The Sports Club.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Khushhal Mandal. Engineered with precision.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
